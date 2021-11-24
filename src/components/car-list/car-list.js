@@ -11,7 +11,7 @@ const CarList = () => {
 
   useEffect(() => {
     fetchCars();
-  }, [fetchCars]);
+  }, []);
 
   if (loading) {
     return <h2 className="car-list__title">Загрузка данных...</h2>;
