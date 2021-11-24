@@ -1,0 +1,28 @@
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: -35px;
+  margin-left: -10px;
+  margin-right: -10px;
+  & > * {
+    padding-top: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.grid__item {
+  flex: 0 0 100%;
+}
+
+@for $i from 1 to 12 {
+  $part: $i/12 * 100%;
+  .grid__item-mobile-#{$i} {
+    flex: 1 0 $part;
+  }
+  @media (min-width: 720px) {
+    .grid__item-tablet-#{$i} {
+      flex: 1 0 $part;
+    }
+  }
+}

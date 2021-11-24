@@ -1,0 +1,107 @@
+.custom-select {
+  position: relative;
+
+  font-size: 12px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #999;
+
+  &__inner {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+
+    height: 38px;
+    border: 1px solid #dcdcdc;
+    border-bottom: 0;
+    box-shadow: 0 2px 0 0 #dcdcdc;
+    padding-left: 10px;
+
+    &:hover {
+      box-shadow: 0 2px 0 0 #c3002f;
+    }
+
+    &:focus,
+    ._open & {
+      outline: none;
+      border-bottom-color: #111;
+      box-shadow: none;
+    }
+
+    &:focus .select-box__label {
+      top: 0;
+      margin-top: -23px;
+      transform: none;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    content: "";
+    right: 17px;
+    top: calc(50% - 4px);
+    width: 12px;
+    height: 6px;
+    background: url("./rectangle-1.svg") no-repeat 100% 0 / 12px 6px;
+    transition: 0.2s;
+
+    ._open & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__label,
+  &__selected-item {
+    position: absolute;
+    box-sizing: border-box;
+
+    text-align: left;
+    line-height: 0.9;
+
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    padding: 5px 0 5px 10px;
+
+    transition: 0.2s;
+  }
+
+  &__label {
+    ._open &,
+    ._selected & {
+      top: 0;
+      margin-top: -23px;
+      transform: none;
+    }
+  }
+
+  &__selectedItem {
+    color: #111;
+  }
+
+  &__outer {
+    position: absolute;
+    box-sizing: border-box;
+
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 13px 10px 15px;
+    border: 1px solid #dcdcdc;
+    border-top: 0;
+    box-shadow: 0 -2px 0px 0px #111;
+
+    background: #fff;
+    z-index: 11;
+  }
+
+  &__option {
+    &:not(:last-child) {
+      padding-bottom: 10px;
+    }
+    &:hover {
+      color: black;
+    }
+  }
+}

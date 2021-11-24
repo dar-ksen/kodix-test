@@ -1,0 +1,35 @@
+.btn {
+  position: relative;
+
+  background: #c3002f;
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  padding: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  transition: background-color 0.4s;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-color: #a00a2d;
+  }
+
+  &.wide {
+    width: 100%;
+    justify-content: center;
+  }
+  svg {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,151 @@
+.carItem {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 0 -10px;
+
+  background: #f5f6f6;
+
+  font-size: 14px;
+  font-weight: 300;
+  color: #282d30;
+  text-align: left;
+  line-height: 1.2;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(152, 152, 152, 0.2);
+  }
+
+  &__name {
+    width: 47.5%;
+    margin: 0 0 20px;
+    line-height: 1.4;
+  }
+
+  &__color {
+    width: 20px;
+    height: 20px;
+    margin: 0 20px 20px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  &__price {
+    width: calc(33.75% - 10px);
+    line-height: 1.4;
+    margin: 0 10px 20px auto;
+    text-align: right;
+  }
+
+  &__options {
+    font-size: 13px;
+    color: #8b9497;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  &__year {
+    width: 18.75%;
+  }
+
+  &__delete {
+    align-self: center;
+
+    margin: -10px 0 0 auto;
+    padding: 10px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: inherit;
+
+    color: #8b9497;
+    line-height: 1;
+    background: transparent;
+
+    border: 0;
+
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background: #282d30;
+      border-radius: 33px;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .carItem {
+    padding: 20px 20px 10px 15px;
+    margin: 0;
+
+    &__name {
+      width: 36%;
+      margin: 0;
+    }
+    &__year {
+      order: 1;
+      margin: 0 3%;
+      width: 5%;
+    }
+
+    &__color {
+      order: 2;
+      margin: 0 10px;
+    }
+
+    &__status {
+      order: 3;
+      width: 14%;
+      margin: 0 3%;
+    }
+
+    &__price {
+      order: 4;
+      text-align: left;
+      margin: 0;
+      width: 15%;
+    }
+
+    &__delete {
+      order: 5;
+      align-self: flex-start;
+      margin: -8px 0 0 auto;
+    }
+
+    &__options {
+      order: 6;
+      width: 36%;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .carItem {
+    &__name,
+    &__options {
+      width: 45%;
+    }
+
+    &__status,
+    &__price {
+      width: 11%;
+    }
+  }
+}
+
+@media (max-width: 359px) {
+  .carItem {
+    &__name {
+      width: 43.5%;
+    }
+    &__color {
+      margin: 0 10px 20px;
+    }
+    &__price {
+      width: 34%;
+    }
+  }
+}
