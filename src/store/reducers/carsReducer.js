@@ -15,7 +15,7 @@ const carsReducer = (state = initialState, action) => {
     case types.FETCH_CARS_ERROR:
       return { ...state, loading: false, error: action.payload };
     case types.ADD_CAR:
-      return { ...state, cars: [action.payload, ...state.cars] };
+      return { ...state, cars: [...state.cars, action.payload] };
     case types.DELETE_CAR:
       return {
         ...state,
