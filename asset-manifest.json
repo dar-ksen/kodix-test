@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/kodix-test/static/css/main.b84952e1.chunk.css",
+    "main.js": "/kodix-test/static/js/main.b0d8a1ba.chunk.js",
+    "main.js.map": "/kodix-test/static/js/main.b0d8a1ba.chunk.js.map",
+    "runtime-main.js": "/kodix-test/static/js/runtime-main.022a539d.js",
+    "runtime-main.js.map": "/kodix-test/static/js/runtime-main.022a539d.js.map",
+    "static/css/2.679831fc.chunk.css": "/kodix-test/static/css/2.679831fc.chunk.css",
+    "static/js/2.2fcdafea.chunk.js": "/kodix-test/static/js/2.2fcdafea.chunk.js",
+    "static/js/2.2fcdafea.chunk.js.map": "/kodix-test/static/js/2.2fcdafea.chunk.js.map",
+    "index.html": "/kodix-test/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/kodix-test/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.b84952e1.chunk.css.map": "/kodix-test/static/css/main.b84952e1.chunk.css.map",
+    "static/js/2.2fcdafea.chunk.js.LICENSE.txt": "/kodix-test/static/js/2.2fcdafea.chunk.js.LICENSE.txt",
+    "static/media/duck_1x.2481b2f2.png": "/kodix-test/static/media/duck_1x.2481b2f2.png",
+    "static/media/duck_2x.47f65797.png": "/kodix-test/static/media/duck_2x.47f65797.png",
+    "static/media/custom-select.scss": "/kodix-test/static/media/rectangle-1.3b4c6648.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.022a539d.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.2fcdafea.chunk.js",
+    "static/css/main.b84952e1.chunk.css",
+    "static/js/main.b0d8a1ba.chunk.js"
+  ]
+}
