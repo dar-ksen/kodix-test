@@ -20,6 +20,10 @@
   .grid__item-mobile-#{$i} {
     flex: 1 0 $part;
   }
+}
+
+@for $i from 1 to 12 {
+  $part: $i/12 * 100%;
   @media (min-width: 720px) {
     .grid__item-tablet-#{$i} {
       flex: 1 0 $part;

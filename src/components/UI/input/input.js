@@ -1,7 +1,7 @@
 import React from "react";
-import "./my-input.scss";
+import "./input.scss";
 
-const MyInput = ({ name, value, onChange, label, ...inputProps }) => {
+const Input = ({ name, value, onChange, label, ...inputProps }) => {
   return (
     <div className="my-input">
       <input
@@ -10,11 +10,10 @@ const MyInput = ({ name, value, onChange, label, ...inputProps }) => {
         {...inputProps}
         value={value}
         onChange={onChange}
-        required
       />
       <label htmlFor={name}>{label}</label>
     </div>
   );
 };
 
-export default MyInput;
+export default Input;

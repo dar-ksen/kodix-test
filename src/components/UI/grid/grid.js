@@ -7,7 +7,7 @@ const Grid = ({ className, container, item, children, mobile, tablet }) => {
     { grid: container },
     { grid__item: item },
     mobile ? `grid__item-mobile-${mobile}` : "",
-    tablet ? `grid__item-mobile-${tablet}` : "",
+    tablet ? `grid__item-tablet-${tablet}` : "",
     className
   );
 

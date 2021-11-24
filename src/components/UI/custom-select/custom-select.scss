@@ -21,7 +21,7 @@
     }
 
     &:focus,
-    ._open & {
+    .open & {
       outline: none;
       border-bottom-color: #111;
       box-shadow: none;
@@ -44,7 +44,7 @@
     background: url("./rectangle-1.svg") no-repeat 100% 0 / 12px 6px;
     transition: 0.2s;
 
-    ._open & {
+    .open & {
       transform: rotate(180deg);
     }
   }
@@ -68,15 +68,15 @@
   }
 
   &__label {
-    ._open &,
-    ._selected & {
+    .open &,
+    .selected & {
       top: 0;
       margin-top: -23px;
       transform: none;
     }
   }
 
-  &__selectedItem {
+  &__selected-item {
     color: #111;
   }
 
@@ -97,8 +97,13 @@
   }
 
   &__option {
+    cursor: pointer;
     &:not(:last-child) {
       padding-bottom: 10px;
+    }
+
+    &.selected {
+      color: black;
     }
     &:hover {
       color: black;

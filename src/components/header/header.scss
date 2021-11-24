@@ -8,5 +8,15 @@
 }
 
 .header__logo {
-  margin: 10px 0 -10px;
+  max-width: 100%;
+  height: auto;
+  padding: 22px 30px 17px;
+}
+
+@media (min-width: 720px) {
+  .header__logo {
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: -10px;
+  }
 }

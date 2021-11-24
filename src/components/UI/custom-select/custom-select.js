@@ -2,28 +2,34 @@ import classNames from "classnames";
 import React, { useState } from "react";
 import "./custom-select.scss";
 
-const CustomSelect = ({ items, selectedItem, selectItem }) => {
+const CustomSelect = ({ items, selected, select }) => {
   const [showItems, setShowItems] = useState(false);
+  const [label, setLabel] = useState("");
 
-  const selecterClass = classNames(
+  const selectClass = classNames(
     "custom-select",
-    { _open: showItems },
-    { _selected: selectedItem }
+    { open: showItems },
+    { selected: selected }
   );
+  const toggleSelect = () => setShowItems((prevShow) => !prevShow);
 
-  const onCLick = () => setShowItems((prevShow) => !prevShow);
+  const selectValue = (element) => {
+    setShowItems(false);
+    setLabel(element.description);
+    select({ status: element.value });
+  };
 
   return (
-    <div className={selecterClass}>
-      <div onClick={onCLick} className="custom-select__inner">
+    <div className={selectClass}>
+      <div onClick={toggleSelect} className="custom-select__inner">
         <span className="custom-select__label">Статус</span>
         <span
           className="custom-select__selected-item"
           style={{
-            visibility: selectedItem ? "visible" : "hidden",
+            visibility: selected ? "visible" : "hidden",
           }}
         >
-          {selectedItem}
+          {label}
         </span>
         <div className="custom-select__arrow" />
       </div>
@@ -34,17 +40,17 @@ const CustomSelect = ({ items, selectedItem, selectItem }) => {
       >
         {items.map((item) => (
           <div
-            onClick={() => selectItem(item)}
+            onClick={() => selectValue(item)}
             className={`custom-select__option ${
-              selectedItem === item.value ? "selected" : ""
+              selected === item.value ? "selected" : ""
             }`}
-            key={item.id}
+            key={item.value}
           >
-            {item.value}
+            {item.description}
           </div>
         ))}
       </div>
-      <input type="hidden" value={selectedItem} name="status" />
+      <input type="hidden" value={selected} name="status" />
     </div>
   );
 };

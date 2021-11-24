@@ -1,4 +1,4 @@
-.carItem {
+.car-item {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +76,7 @@
 }
 
 @media (min-width: 720px) {
-  .carItem {
+  .car-item {
     padding: 20px 20px 10px 15px;
     margin: 0;
 
